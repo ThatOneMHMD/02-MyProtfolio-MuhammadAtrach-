@@ -201,12 +201,13 @@ main article p {
     main article section img {
 
         width: 250px;
-        margin-left: 10px ;
+       
     }
 
     .fake-pic-link {
 
         display: block;
+        width: 300px;
     }
 
     .column-right {
@@ -295,7 +296,7 @@ main article p {
 
     main{
 
-        margin: 5px;
+        margin: 0px;
     }
 
 
@@ -322,8 +323,10 @@ main article p {
     .larger-pic-link, .larger-pic, .fake-pic-link, .fake-pic-link {
 
         width: 100%;
+        height: fit-content;
         margin: 5px 0;
         padding: 0;
+        
     }
 
     .column-right{
