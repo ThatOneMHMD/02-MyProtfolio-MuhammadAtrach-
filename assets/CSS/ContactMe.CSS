@@ -1,0 +1,361 @@
+/* same basic format etc. mentioned in the BasePortfolioStyle.CSS */
+root {
+    /* declare a variable with `--` syntax */
+    --dark: #13293d;
+    --light: #fff;
+    --link-color: gainsboro;
+    --cards: gray;
+  }
+
+
+/* styling for main figure; position and how it looks, etc. */
+figure  { 
+
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background: url(../images/depositphotos_109775010-stock-photo-white-matrix-code-on-black.jpg);
+    
+}
+
+figure h1 {
+
+    font-size: 42px;
+    color: var(--dark);
+    -webkit-text-stroke: 2px var(--light);
+    position: absolute;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-style: solid var(--cards);
+    opacity: 90%;
+
+}
+
+
+
+/* start the about me main with two columns. try section 1 and section 2 with simple commands and make sure the flex works!!!! */
+main, aside {
+ 
+    width: 100%;
+    margin: 25px;
+    
+}
+
+/* the idea behind this entire structure is to make a row that contains two columns. Thus is gives the page the desired look and makes it easier to edit! */
+.row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column-left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 30%;  
+    
+}
+
+.column-right {
+
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    border-left: solid var(--dark);
+    padding-left: 50px;
+    margin: 20px;
+    width: 60%;
+    flex-wrap: wrap;
+    
+}
+
+/* a class to edit my picture */
+.pic-me {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    
+}
+
+/* a special class to edit that part of the text of a specific paragraph; main, second column */
+.title-text {
+
+    color: var(--dark);
+    font-size: 32px;
+    margin: 40px;
+    padding: 20px;
+}
+
+/* changes stuff when cursor hovers atop it etc. */
+.pic-me:hover {
+
+    opacity: 75%;
+    transition-duration: .5s;
+    transition-delay: 0;
+    box-shadow: 5px 10px var(--dark);
+
+}
+
+/* changes stuff as it is clicked! */
+.pic-me:active { 
+    
+    opacity: 50%;
+    transition-duration: .5s; 
+    cursor:pointer;
+
+}
+
+/* Style the entire form section where the inputs are displayed */
+form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+form h3 {
+
+    font-size: 22px;
+    color: var(--dark);
+    margin: 10px;
+   
+}
+  
+  /* Style the input field */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--link-color);
+    color: var(--dark);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    
+    
+}
+
+#bigger-box {
+
+    height: 100px;
+}
+ 
+
+/* Style the input field when it's focused */
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: var(--dark);
+    color: var(--dark);
+    box-shadow: 0 0 5px var(--cards);
+    text-align: left;
+    resize: vertical;
+    vertical-align: top;
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: wrap;
+    
+}
+
+/* style the button */
+button {
+
+    border-color: var(--dark);
+    color: var(--dark);
+    box-shadow: 0 0 5px var(--cards);
+    background-color: var(--link-color);
+    text-align: center;
+    padding: 2px 5px;
+    width: 85x;
+    height: 25px;
+    
+}
+
+/* Note: the above, input and the send button, are only there for show, for now. Once As we learn more, I'll link that to js and my own emial in return, making it truly functional! The otehr easy way would be to add my email and make it a link to gmail etc., but I feel that that is just lazy and unpractical as it may leave my information available for scams!*/
+
+/* adjustments for screen changes */
+@media screen and (max-width: 1250px) {
+
+    main, aside {
+
+        margin: 20px 10px;
+    }
+
+    .title-text {
+
+        color: var(--dark);
+        font-size: 28px;
+        text-align: start;
+    }
+
+    main article section img {
+
+        width: 250px;
+        margin-left: 10px ;
+    }
+
+    .fake-pic-link {
+
+        display: block;
+    }
+
+    .column-right {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;  
+    }
+
+    .pic-me{
+        
+        margin: 0;
+    }
+
+    .pic-me-link {
+
+        width: 90%;
+    }
+
+    .column-right {
+
+        margin: 0px;
+        width: 60%;
+            
+    }
+    
+  }
+
+  /* same as above etc. screen adjsutment changes... */
+  @media screen and (max-width: 950px) {
+    
+    main, aside {
+
+        margin: 0;
+        padding: 0;
+    }
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+
+    .title-text {
+
+        font-size: 22px;
+        text-align: center;
+       
+       
+    }
+
+    
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        
+    }
+
+    .column-right{
+
+        flex-direction: row;
+        border-left: none;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        margin: 0px;
+        
+    }
+
+    .column-left{
+
+        width: 500px;
+        align-items: center;
+        border-bottom: solid var(--dark);
+        margin: 10px;
+    }
+
+    
+  }
+
+
+  @media screen and (max-width: 550px) {
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+
+    main, aside{
+
+        margin: 0;
+    }
+
+
+    .title-text {
+
+        font-size: 22px;
+        text-align: center;
+
+    }
+
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    main article{
+
+        margin: 0;
+    }
+
+    .pic-me-link, .pic-me, .fake-pic-link, .fake-pic-link {
+
+        width: 100%;
+        margin: 5px 0;
+        padding: 0;
+    }
+
+    .column-right{
+
+        flex-direction: row;
+        border-left: none;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .column-left{
+
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        border-bottom: solid var(--dark);
+    }
+    
+  }
+
+
+  
+

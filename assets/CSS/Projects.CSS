@@ -1,0 +1,348 @@
+/* colours made variables like before so that I can change them all together when required */
+root {
+    /* declare a variable with `--` syntax */
+    --dark: #13293d;
+    --light: #fff;
+    --link-color: gainsboro;
+    --cards: gray;
+  }
+
+
+/* styling for main figure; position and how it looks */
+figure  { 
+
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background: url(../images/depositphotos_109775010-stock-photo-white-matrix-code-on-black.jpg);
+        
+}
+
+/* style its text etc. */
+figure h1 {
+
+    font-size: 42px;
+    color: var(--dark);
+    -webkit-text-stroke: 2px var(--light);
+    position: absolute;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-style: solid var(--cards);
+    opacity: 90%;
+
+}
+
+
+/* makes one row with 2 columns! */
+main {
+ 
+    width: 100%;
+    margin: 25px;
+    
+}
+
+.row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column-left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 20%;  
+    
+}
+
+.column-right {
+
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    border-left: solid var(--dark);
+    padding-left: 50px;
+    margin: 20px;
+    width: 70%;
+    flex-wrap: wrap;
+    
+    
+}
+
+/* styles all imgs in main */
+main a img {
+
+    box-sizing: border-box;
+    border: solid var(--cards);
+    padding: 1px;
+    margin: 20px 0;
+    order: 1;  
+    
+}
+
+
+/* styling for the link spaces as they contain my fake picutres. Ideally, I would have added an entire section for each pic and made it fit accordignly! But this works for my purposes! */
+.fake-pic-link {
+
+    box-sizing: border-box;
+    border-style: solid var(--link-color);
+    border-width: 1px;
+    width: 45%;
+    height: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* a special class for my first project, made it larger as per my requirements! */
+.larger-pic {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* a class to style all other pics, aside from first */
+.fake-pic {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+    margin-left: 0;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+/* styles all text in the article section inside the main segment. Works for all unless they have a special id or class! */
+main article p {
+
+    
+    font-size: 36px;
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    color: var(--dark);
+    margin: 40px;
+    padding: 20px;
+   
+}
+
+/* special id for text, makes it look better */
+#title-text {
+
+    color: var(--dark);
+    font-size: 36px;
+    text-align: start;
+}
+
+/* hovering effects for the big img/ first project */
+.larger-pic:hover {
+
+    opacity: 75%;
+    transition-duration: .5s;
+    transition-delay: 0;
+    box-shadow: 5px 10px var(--dark);
+
+}
+
+/* for when it's active! */
+.larger-pic:active { 
+    
+    opacity: 50%;
+    transition-duration: .5s; 
+    cursor:pointer;
+
+}
+
+/* hover effects for all other pics to which this class is specified */
+.fake-pic:hover {
+
+    opacity: 55%;
+    transition-duration: .5s;
+    transition-delay: 0;
+    box-shadow: 5px 10px var(--dark);
+
+}
+
+/* same but for when it's active/ it is clicked. */
+.fake-pic:active { 
+    
+    opacity: 40%;
+    transition-duration: .5s; 
+    cursor:pointer;
+
+}
+
+/* chnages take place once the screen size is adjusted! For this special max-width! */
+@media screen and (max-width: 1250px) {
+
+    main{
+
+        margin: 10px;
+    }
+
+    #title-text {
+
+        color: var(--dark);
+        font-size: 28px;
+        text-align: start;
+    }
+
+    main article section img {
+
+        width: 250px;
+        margin-left: 10px ;
+    }
+
+    .fake-pic-link {
+
+        display: block;
+    }
+
+    .column-right {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;  
+    }
+
+    .larger-pic-link {
+
+        width: 90%;
+    }
+
+    .column-right {
+
+        margin: 0px;
+        width: 60%;
+            
+    }
+    
+  }
+
+/* screen adjustments chanhges */
+  @media screen and (max-width: 850px) {
+    
+    main{
+
+        margin: 0;
+    }
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+
+    #title-text {
+
+        font-size: 22px;
+       
+       
+    }
+
+    
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .column-right{
+
+        flex-direction: row;
+        border-left: none;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .column-left{
+
+        width: 500px;
+        align-items: center;
+        border-bottom: solid var(--dark);
+    }
+
+    
+  }
+
+  /* same, screen ajdustments cause those corresponding changes! */
+  @media screen and (max-width: 550px) {
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+
+    main{
+
+        margin: 5px;
+    }
+
+
+    #title-text {
+
+        font-size: 22px;
+
+    }
+
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    main article{
+
+        margin: 0;
+    }
+
+    .larger-pic-link, .larger-pic, .fake-pic-link, .fake-pic-link {
+
+        width: 100%;
+        margin: 5px 0;
+        padding: 0;
+    }
+
+    .column-right{
+
+        flex-direction: row;
+        border-left: none;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .column-left{
+
+        width: 100%;
+        align-items: center;
+        border-bottom: solid var(--dark);
+    }
+    
+  }
+
+

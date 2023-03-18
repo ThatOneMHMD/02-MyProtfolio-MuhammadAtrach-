@@ -1,0 +1,268 @@
+
+/*general styling not included because it is mentioned in other CSS sheets*/
+
+:root {
+    
+    --dark: #13293d;
+    --light: #fff;
+    --link-color: gainsboro;
+    --cards: gray;
+  }
+
+
+/* styling for main figure; position and how it looks. Just under the navbar! This is consistent for all pages!*/
+figure  { 
+
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background: url(../images/depositphotos_109775010-stock-photo-white-matrix-code-on-black.jpg);
+}
+
+/* style for the title text inside the figure */
+figure h1 {
+
+    font-size: 42px;
+    color: var(--dark);
+    -webkit-text-stroke: 2px var(--light);
+    position: absolute;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-style: solid var(--cards);
+    opacity: 90%;
+}
+
+/* styling for the main and aside segment overall; main thing is how all sections within are viewed underneath one another while they are inline to
+the aside element */
+main {
+ 
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+main article p {
+
+    font-size: 36px;
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    color: var(--dark);
+    margin: 40px;
+    padding: 20px;
+    border-left: solid var(--dark);
+    border-right: solid var(--dark);
+}
+
+aside {
+
+    display: flex;
+    flex-direction: row;
+    min-height: 60vh;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--dark);
+    margin-top: 20px;
+}
+
+
+
+/* styling for the separate sections in the aside segment */
+.aside-section {
+
+    box-sizing: border-box;
+    border-style: solid var(--link-color);
+    border-width: 1px;
+    width: 450px;
+    height: 450px;
+    padding: 20px;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    min-height: 60vh;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: var(--link-color);
+
+}
+
+.aside-section p {
+
+    font-size: 26px;
+    color: var(--dark);
+    text-align: center;
+    width:fit-content;
+}
+
+.aside-section h2 {
+
+    font-size: 34px;
+    background-color: var(--dark);
+    border-radius: 3%;
+    text-align: center;
+    opacity: 70%;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+
+/* styling for the speicifc figures/imgs inside the individual sections */
+.fig-service {
+    width: 100%;
+    height: 200px;
+    margin: 25px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* This is special for the pic in service 3 because it's slightly larger than the rest. While this works, in a perfect world, I would have edited the pic before adding it to the file. */
+.fig-service-3 {
+
+    width: 90%;
+    height: 200px;
+    margin: 25px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* for hovering over pic etc. */
+.fig-service:hover {
+
+    opacity: 50%;
+    transition-duration: .5s;
+    transition-delay: 0;
+    box-shadow: var(--light);
+}
+
+.fig-service:active { 
+    
+    opacity: 30%;
+    transition-duration: .5s; 
+    cursor:pointer;
+
+}
+
+/* again, this is a special one for service-3. I am only changing the name!*/
+.fig-service-3:hover {
+
+    opacity: 50%;
+    transition-duration: .5s;
+    transition-delay: 0;
+    box-shadow: #fff;
+}
+
+.fig-service-3:active { 
+    
+    opacity: 30%;
+    transition-duration: .5s; 
+}
+
+/* changes according to screen size! */
+@media screen and (max-width: 720px) {
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+    
+    main{
+
+        margin: 0;
+    }
+
+    main article p {
+
+        font-size: 18px;
+        margin: 5px;
+        
+
+
+    }
+
+    .aside-section {
+
+      width: 100%;
+      height: 30%;
+      display: block;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--dark);
+      min-height: fit-content;
+      
+
+    }
+
+    .aside-section p {
+
+        display: none;
+    }
+    
+    .aside-section h2 {
+    
+        display: none;
+    
+    
+    }
+
+    aside section img {
+        
+        opacity: 0;
+        
+    }
+
+
+    #service-1 {
+       
+        background-size: 10%;
+        background-position: center;
+        background: url(../images/coding\ games.jpg);
+        background-color: var(--light);
+        margin-bottom: 10px;
+  
+    }
+
+    #service-2 {
+
+        background-size: cover;
+        background-position: center;
+        background: url(../images/website-background-design-guide-768x492.png);
+        background-color: var(--light);
+        margin-bottom: 10px;
+  
+    }
+
+    #service-3 {
+       
+        background-size: cover;
+        background-position: center;
+        background: url(../images/Top-10-Ethical-Hacking-Skills-that-will-Land-You-in-a-6-.jpg);
+        background-color: var(--light);
+        margin-bottom: 10px;
+  
+    }
+
+    aside a {
+
+        width: 100%;
+    }
+
+    
+  }

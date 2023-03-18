@@ -1,0 +1,261 @@
+/* Same base, colours are variables so that I can change them all at will! */
+root {
+    /* declare a variable with `--` syntax */
+    --dark: #13293d;
+    --light: #fff;
+    --link-color: gainsboro;
+    --cards: gray;
+  }
+
+
+/* styling for main figure; position and how it looks */
+figure  { 
+
+    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background: url(../images/depositphotos_109775010-stock-photo-white-matrix-code-on-black.jpg);
+    
+}
+
+figure h1 {
+
+    font-size: 42px;
+    color: var(--dark);
+    -webkit-text-stroke: 2px var(--light);
+    position: absolute;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--dark);
+    border-style: solid var(--cards);
+    opacity: 90%;
+
+}
+
+
+
+/* styling for main; make it one row and insert two columns in it */
+
+main {
+ 
+    width: 100%;
+    margin: 25px;
+    
+}
+
+/* class for row display using display flex */
+.row {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* as the name suggests, class for left column */
+.column-left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* class for right column */
+.column-right {
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+    
+}
+
+main section img {
+
+    width: 300px;
+    border-top: solid var(--dark);
+    border-bottom: solid var(--dark);
+    padding: 5px;
+    margin: 30px 0;
+   
+
+}
+
+/* keeps the attached img hidden (by default) until screen changes happen, below... */
+.img-hidden {
+
+    display: none;
+    height: 297px;
+
+
+}
+
+main article p {
+
+    
+    font-size: 36px;
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    color: var(--dark);
+    margin: 40px;
+    padding: 20px;
+    border-left: solid var(--dark);
+    border-right: solid var(--dark);
+}
+
+/* id for that special text */
+#title-text {
+
+    color: var(--dark);
+    font-size: 36px;
+    text-align: start;
+}
+
+/* screen adjuste--> changes take place! */
+@media screen and (max-width: 1090px) {
+
+    main{
+
+        margin: 0;
+    }
+
+    main article p {
+
+        font-size: 22px;
+        margin: 5px;
+        
+    }
+
+    .img-hidden{
+
+        display: block;
+    }
+
+    .column-left{
+
+        width: 30%;
+        margin: 1px 10px;
+    }
+
+    .column-right{
+
+        width: 70%;
+        margin: 1px 10px;
+    }
+
+    main article section img {
+
+        width: 250px;
+        margin-left: 10px ;
+    }
+    
+  }
+
+
+  @media screen and (max-width: 850px) {
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+    
+    main{
+
+        margin: 0;
+    }
+
+    main article p {
+
+        font-size: 22px;
+        margin: 5px;
+        
+    }
+
+    #title-text {
+
+        font-size: 28px;
+
+    }
+
+    .img-hidden{
+
+        display: block;
+    }
+
+    
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .column-left{
+
+        flex-direction: row;
+        
+    }
+
+   
+    
+  }
+
+  @media screen and (max-width: 520px) {
+
+    figure h1 {
+
+        font-size: 30px;
+    
+    }
+
+    main{
+
+        margin: 0;
+    }
+
+    main article{
+
+        margin: 0;
+    }
+
+    main article p {
+
+        font-size: 16px;
+        margin: 5px;
+        
+       
+        
+    }
+
+    #title-text {
+
+        font-size: 24px;
+
+    }
+
+    .img-hidden{
+
+        display: none;
+    }
+
+    
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+   
+    
+  }

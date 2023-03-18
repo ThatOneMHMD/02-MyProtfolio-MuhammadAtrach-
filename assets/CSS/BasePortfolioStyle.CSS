@@ -1,0 +1,210 @@
+/* Base CSS styling sheet for all htmls! Refrenced/linked in each html! */
+
+/* colours that are repeated many times. Made variables so that I an change them if needed! */
+:root {
+
+    --dark: #13293d;
+    --light: #fff;
+    --link-color: gainsboro;
+    --cards: gray;
+  }
+
+/* for overall general styling: creating boxes for all content! */
+* {
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: var(--light);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+/* body formatting; background colour etc., made horizontal overflow hidden to hide corresponding scrolling bar */
+body {
+
+    background-color: var(--light);
+    overflow-x:hidden;
+    width: 100%;
+}
+
+/* formatting for the header; font, background colour, and padding between the element and the border of the box */
+header {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 48px;
+    background-color: var(--dark);
+    padding: 20px; 
+}
+
+/* navigation bar styling; font and display in a line, opposed to starting a new line for each link in the nav bar */
+.navbar {
+
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+    color: var(--link-color);  
+}
+
+
+
+/* h1 (titile) styling; font and display in a line alongside the links in nav bar */
+h1 img {
+
+    max-width: 50px;
+    max-height: 50px;
+    color: #7d280c; 
+}
+
+/* styling specification for the links in nav (and main since the same class was usd!); main thing is that they're floating to the right and on the same line as the title etc. */
+.navbar-links {
+
+    list-style: none;
+    padding: 1px;
+    margin-right: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.navbar-links li {
+
+    margin: 0 30px;
+}
+
+/* mainly to remove inherent underline! */
+nav a:link { 
+    
+    text-decoration: none; 
+}
+
+nav a:visited { 
+    
+    text-decoration: none; 
+    color: var(--light);
+}
+
+/* changes occur when cursor hovers on top of link! (for all :hovers) */
+nav a:hover { 
+
+    text-decoration: none; 
+    opacity: 50%;
+    transition-duration: 1s;
+    transition-delay: 0;
+    color: var(--link-color);
+}
+
+nav a:active { 
+    
+    text-decoration: none;
+    opacity: 30%;
+    transition-duration: 1; 
+
+}
+
+/* styling for all paragraph elements unless otherwise specified */
+p {
+
+    font-size: 16px;
+}
+
+/* styling for the paragraph in the footer; mainly added background, changed colour to black, and made text centered! */
+footer{
+
+    box-sizing: border-box;
+    border-style: solid var(--cards);
+    border-width: 1px;
+    width: 100%;
+    padding: 1%;
+    opacity: 0.5;
+    background-color: var(--link-color);
+    color: var(--dark);
+    border-radius: 3%;
+}
+
+footer p {
+
+    padding: 30px;
+    clear: both;
+    text-align: center;
+    font-size: 20px;
+    z-index: 5;
+}
+
+/* for all links in footer. Changed colour so that text is not fading into background! (colour was light, like background in footer) */
+footer a { 
+    
+    text-decoration: none;
+    color: var(--dark); 
+}
+
+footer a:hover { 
+
+    text-decoration: none; 
+    opacity: 50%;
+    transition-duration: 1s;
+    transition-delay: 0;
+    color: var(--dark);;
+
+}
+
+
+footer a:active { 
+    
+    text-decoration: none;
+    opacity: 30%;
+    transition-duration: 1; 
+
+}
+
+/* applies the specified changes below when the screen size is changed! */
+@media screen and (max-width: 720px) {
+
+    header h1 {
+
+        display:flex;
+        justify-content: center;
+    
+    }
+
+    .navbar {
+      width: 100%;
+      display: block;
+    }
+
+    .navbar-links {
+       
+        display: block;
+        font-size: larger;
+        align-items: center;
+        padding-top: 0;
+        text-align: center;
+
+    }
+
+    nav ul li {
+
+        padding-top: 20%;
+    }
+
+    footer ul li {
+
+        display: none;
+    }
+
+}
+
+
+
+
+
+/* OVERALL NOTE (apply Word Wrap for a better experience): the instructions mention that "WHEN I click one of the links in the navigation, THEN the UI scrolls to the corresponding section". However, for my purposes, this was not applied! I used external links, leading to other html pages so that I would be able to realistically use this portfolio in real life, after some adjustments. So, when I press on the "Projects" link in nav, it transfers me to another page that has all that info, instead of making the section small and useless and inserting it into the same home page.
+
+With that being said, if I were to blindly follow the guidlines, I would insert an id-target inside the invividual links, ex: ..href="#contact". This would lead me to the special id="contact" that I would have inserted in the special Contact Me section!
+
+That's it, thanks for taking the time to read this! I just wanted to make myself clear!*/
+
