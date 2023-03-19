@@ -34,7 +34,7 @@ MIT
 
 ## Credits
 
-ThatOneMHMD - The creator of the new website and the one who updated all accesibility standards!
+ThatOneMHMD - The creator of this website!
 (Link: https://github.com/ThatOneMHMD)
 
 
